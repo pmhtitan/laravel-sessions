@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/session', [App\Http\Controllers\PagesController::class, 'index'])->name('session');
+Route::get('/about', [App\Http\Controllers\PagesController::class, 'about'])->name('session');
+
+
