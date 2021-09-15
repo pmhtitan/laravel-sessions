@@ -9,11 +9,6 @@ class PagesController extends Controller
 {
     public function index()
     {
-        Session::put('name',['John Doe']);
-        Session::put('age', [30,40,50]);
-
-       
-
         dd(Session::all()); 
 
         return view('index');
